@@ -7,7 +7,8 @@ public class BankAccountApp {
 		Checking checkingAccount1 = new Checking("Shahzada Shah", "412738341", 4200);
 		Savings savingAccount1 = new Savings("Tanzeel Saeed", "215632173", 3400);
 		
-		
+		checkingAccount1.showInfo();
+		savingAccount1.showInfo();
 		
 		
 		
