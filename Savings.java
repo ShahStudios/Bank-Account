@@ -16,6 +16,12 @@ public class Savings extends Account {
 		
 	}
 	
+
+	@Override
+	public void setRate() {
+		rate = getBaseRate() - .25;
+	}
+	
 	
 	// create method for safetyDepositebox (generate numbers to have 3 digit box id and 4 digit key)
 	public void setSafetyDepositBox() {
@@ -28,14 +34,13 @@ public class Savings extends Account {
 	
 	// show info specific to checking account (polymorphism aka overriding)
 	public void showInfo() {
-		System.out.println(
-				"---------------------------------");
-		System.out.println("Account Type: Savings");
 		super.showInfo();
+		System.out.println("Account Type: Savings");
 		System.out.println(
 				 "\n[ Your Saving Account Details ]" +
 				"\nSafety Deposit Box ID: " + safetyDepositBoxID +
-				"\nSafety Deposit Box Key: " + safetyDepositBoxKey);
+				"\nSafety Deposit Box Key: " + safetyDepositBoxKey +
+				"\nRate: " + rate);
 		System.out.println(
 				"---------------------------------\n");
 	}

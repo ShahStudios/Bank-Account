@@ -22,8 +22,13 @@ public abstract class Account implements IBaseRate {
 		this.accountNumber = setAccountNumber();
 		// System.out.println("Account Number: " + this.accountNumber);
 		
-		
+		// call rate depending on if it is for checking or saving
+		setRate();
 	}
+	
+	// can't create objects with this class for children to implement this method
+	public abstract void setRate();
+	
 	
 	// setup unique account number using his last two ssn, 
 	// static unique number 10000 incremented and a random number generated all combined together
@@ -36,7 +41,7 @@ public abstract class Account implements IBaseRate {
 	
 	// Show info method 
 	public void showInfo() {
-		System.out.println(""
+		System.out.println("---------------------------------\n" + "      Bank Account Details\n" 
 				+ "---------------------------------\n" + 
 		"Name: " + name + "\nAccount Number: " + accountNumber + "\nBalance: " + balance);
 	}
