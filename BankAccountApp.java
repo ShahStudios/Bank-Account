@@ -35,14 +35,14 @@ public class BankAccountApp {
 		}
 		
 		// test showinfo method
-		accounts.get((int) Math.random() * accounts.size()).showInfo();;
+		// accounts.get((int) Math.random() * accounts.size()).showInfo();;
 		// test interest method 
-		accounts.get((int) Math.random() * accounts.size()).compound();
+		// accounts.get((int) Math.random() * accounts.size()).compound();
 		// test deposit method
-		accounts.get((int) Math.random() * accounts.size()).deposit(2000);
+		// accounts.get((int) Math.random() * accounts.size()).deposit(2000);
 		// test withdraw method
-		accounts.get((int) Math.random() * accounts.size()).withdraw(500);
+		// accounts.get((int) Math.random() * accounts.size()).withdraw(500);
 		// test withdraw method
-		accounts.get((int) Math.random() * accounts.size()).transfer("Car-Saving", 25);
+		// accounts.get((int) Math.random() * accounts.size()).transfer("Car-Saving", 25);
 	}
 }
