@@ -5,9 +5,12 @@ package bankaccountprogram;
 public abstract class Account implements IBaseRate {
 
 	// list of common properties for children classes
-	String name, ssn, accountNumber;
-	double balance, rate;
-	static int index = 10000;
+	private String name, ssn;
+	private double balance;
+	private static int index = 10000;
+	protected double rate;
+	protected String accountNumber;
+	
 	
 	
 	// common properties for children accounts to inherit
@@ -38,6 +41,36 @@ public abstract class Account implements IBaseRate {
 		int randomNumber = (int)(Math.random() * Math.pow(10, 3));
 		return lastTwoSSN + uniqueID + randomNumber;
 	}
+	
+	// compound interest for children classes
+	public void compound() {
+		double accruedInterest = balance * (rate/100);
+		balance = balance + accruedInterest;
+		System.out.println("Accrued Interest: $" + accruedInterest);
+		viewBalance();
+	}
+	
+	// Common methods for children classes to inherit
+	public void deposit(double amount) {
+		balance = balance + amount;
+		viewBalance();
+	}
+	public void withdraw(double amount) {
+		balance = balance - amount;
+		viewBalance();
+	}
+	public void transfer(String toWhere, double amount) {
+		balance = balance - amount;
+		System.out.println("Transfering $" + amount + " to " + toWhere);
+		viewBalance();
+	}
+	public void viewBalance() {
+		System.out.println("Your balance is now: $" + balance);
+	}
+	
+	
+	
+	
 	
 	// Show info method 
 	public void showInfo() {

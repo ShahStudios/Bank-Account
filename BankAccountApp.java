@@ -10,6 +10,9 @@ public class BankAccountApp {
 		checkingAccount1.showInfo();
 		savingAccount1.showInfo();
 		
+		checkingAccount1.compound();
+		savingAccount1.compound();
+		
 		
 		
 	}

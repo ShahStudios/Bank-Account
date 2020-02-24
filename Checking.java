@@ -3,7 +3,7 @@ package bankaccountprogram;
 public class Checking extends Account {
 
 	// properties specific to checking class
-	int debitCardNumber, debitCardPin;
+	private int debitCardNumber, debitCardPin;
 	
 	// constructor to initialize settings for the checking properties
 	public Checking(String name, String ssn, double initDeposit) {
@@ -28,7 +28,6 @@ public class Checking extends Account {
 		// generate 4 digit number
 		debitCardPin = (int)(Math.random() * Math.pow(10, 4));
 	}
-	
 	
 	
 	// show info specific to checking account (polymorphism aka overriding)
