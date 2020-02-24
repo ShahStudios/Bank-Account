@@ -8,7 +8,7 @@ public class BankAccountApp {
 	public static void main(String [] args) {
 		
 		List<Account> accounts = new ArrayList<Account>();
-		String file = "C:\\Users\\KAZITRON\\Downloads\\Shah-Bank-AccountsInfo.csv";
+		String file = "C:\\Users\\PCName\\Downloads\\Shah-Bank-AccountsInfo.csv";
 		List<String[]> newAccountHolders = CSV.read(file);
 		
 		for (String[] accountHolder : newAccountHolders) {
@@ -27,7 +27,7 @@ public class BankAccountApp {
 		}
 		
 		for (Account acc : accounts) {
-			acc.showInfo();
+			// acc.showInfo();
 			// test other cases for methods to show all the data of each user in the database
 			// acc.compound();
 			// acc.deposit(220);
@@ -35,14 +35,14 @@ public class BankAccountApp {
 		}
 		
 		// test showinfo method
-		// accounts.get((int) Math.random() * accounts.size()).showInfo();;
+		 accounts.get((int) Math.random() * accounts.size()).showInfo();;
 		// test interest method 
-		// accounts.get((int) Math.random() * accounts.size()).compound();
+		 accounts.get((int) Math.random() * accounts.size()).compound();
 		// test deposit method
-		// accounts.get((int) Math.random() * accounts.size()).deposit(2000);
+		 accounts.get((int) Math.random() * accounts.size()).deposit(2000);
 		// test withdraw method
-		// accounts.get((int) Math.random() * accounts.size()).withdraw(500);
+		 accounts.get((int) Math.random() * accounts.size()).withdraw(500);
 		// test withdraw method
-		// accounts.get((int) Math.random() * accounts.size()).transfer("Car-Saving", 25);
+		 accounts.get((int) Math.random() * accounts.size()).transfer("Car-Saving", 25);
 	}
 }
