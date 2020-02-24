@@ -4,8 +4,8 @@ The application has methods to do various tasks. For example, there are methods 
 and to get full information on each bank account.
 
 # What I Learned
-* How to use abstract classes and abstract methods
 * How to use an interface API to receive information
+* How to use abstract classes and abstract methods
 * How to generate random numbers to work with String API
 * How to read data from a file and store it in a data structure
 
