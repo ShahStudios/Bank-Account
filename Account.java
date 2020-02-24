@@ -46,23 +46,39 @@ public abstract class Account implements IBaseRate {
 	public void compound() {
 		double accruedInterest = balance * (rate/100);
 		balance = balance + accruedInterest;
-		System.out.println("Accrued Interest: $" + accruedInterest);
-		viewBalance();
+		System.out.println("---------------------------------\n" + "     Bank Interest Details\n" 
+				+ "---------------------------------\n" + 
+		"Name: " + name + "\nAccount Number: " + accountNumber + "\nAccrued Interest: " + accruedInterest + "\nCurrent Balance: " + balance);
+		System.out.println(
+				"---------------------------------\n");
 	}
 	
 	// Common methods for children classes to inherit
 	public void deposit(double amount) {
+		// test to see if the deposit method is working the balance is updated correctly 
+		// viewBalance();
 		balance = balance + amount;
-		viewBalance();
+		System.out.println("---------------------------------\n" + "      Bank Deposit Details\n" 
+				+ "---------------------------------\n" + 
+		"Name: " + name + "\nAccount Number: " + accountNumber + "\nAmount Deposited: " + amount + "\nCurrent Balance: " + balance);
+		System.out.println(
+				"---------------------------------\n");
 	}
 	public void withdraw(double amount) {
 		balance = balance - amount;
-		viewBalance();
+		System.out.println("---------------------------------\n" + "      Bank Withdraw Details\n" 
+				+ "---------------------------------\n" + 
+		"Name: " + name + "\nAccount Number: " + accountNumber + "\nAmount Withdrew: " + amount + "\nCurrent Balance: " + balance);
+		System.out.println(
+				"---------------------------------\n");
 	}
 	public void transfer(String toWhere, double amount) {
 		balance = balance - amount;
-		System.out.println("Transfering $" + amount + " to " + toWhere);
-		viewBalance();
+		System.out.println("---------------------------------\n" + "      Bank Transfer Details\n" 
+				+ "---------------------------------\n" + 
+		"Name: " + name + "\nAccount Number: " + accountNumber + "\nAmount Transferred: " + amount + "\nTransferred To: " + toWhere + "\nCurrent Balance: " + balance);
+		System.out.println(
+				"---------------------------------\n");
 	}
 	public void viewBalance() {
 		System.out.println("Your balance is now: $" + balance);
